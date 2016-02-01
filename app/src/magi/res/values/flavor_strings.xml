@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Маги</string>
+    <string name="app_disabled_msg">Трябва да активираш приложението, бе мило.</string>
+    <string name="wallpaper_updated">Смених картинката :)</string>
+    <string name="app_disabled">Спряно :(</string>
+    <string name="app_enabled">Пуснато :)</string>
+</resources>
