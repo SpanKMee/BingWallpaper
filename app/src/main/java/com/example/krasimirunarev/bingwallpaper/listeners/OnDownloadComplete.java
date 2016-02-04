@@ -1,6 +1,6 @@
 package com.example.krasimirunarev.bingwallpaper.listeners;
 
-import com.example.krasimirunarev.bingwallpaper.BingResponse;
+import com.example.krasimirunarev.bingwallpaper.ws.BingResponse;
 
 /**
  * @author MentorMate
