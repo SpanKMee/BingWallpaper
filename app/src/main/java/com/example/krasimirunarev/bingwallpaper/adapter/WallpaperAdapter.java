@@ -1,4 +1,4 @@
-package com.example.krasimirunarev.bingwallpaper;
+package com.example.krasimirunarev.bingwallpaper.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,9 +8,11 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.krasimirunarev.bingwallpaper.helpers.WallpaperHelper;
+import com.example.krasimirunarev.bingwallpaper.R;
+import com.example.krasimirunarev.bingwallpaper.Resolutions;
+import com.example.krasimirunarev.bingwallpaper.listeners.OnClick;
+import com.example.krasimirunarev.bingwallpaper.ws.BingResponse;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -23,6 +25,8 @@ public class WallpaperAdapter extends RecyclerView.Adapter<WallpaperAdapter.View
 
     private List<BingResponse.Image> mImages = new ArrayList<>();
     private Context mContext;
+    private OnClick mOnClick;
+
 
     public WallpaperAdapter(Context context) {
         mContext = context;
@@ -32,6 +36,14 @@ public class WallpaperAdapter extends RecyclerView.Adapter<WallpaperAdapter.View
         mImages.clear();
         mImages.addAll(images);
         notifyDataSetChanged();
+    }
+
+    public void setListener(OnClick onClick) {
+        mOnClick = onClick;
+    }
+
+    public BingResponse.Image getItem(int position) {
+        return mImages.get(position);
     }
 
     @Override
@@ -67,14 +79,8 @@ public class WallpaperAdapter extends RecyclerView.Adapter<WallpaperAdapter.View
             mRow.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (Prefs.isApplicationOn()) {
-                        WallpaperHelper.updateWallpaper(mContext, mImages.get(getAdapterPosition())
-                                                                         .getInputStream());
-
-                        Toast.makeText(mContext, R.string.wallpaper_updated, Toast.LENGTH_SHORT)
-                             .show();
-                    } else {
-                        Toast.makeText(mContext, R.string.app_disabled_msg, Toast.LENGTH_LONG).show();
+                    if(mOnClick != null) {
+                        mOnClick.onClick(getAdapterPosition());
                     }
                 }
             });

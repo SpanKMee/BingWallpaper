@@ -1,4 +1,4 @@
-package com.example.krasimirunarev.bingwallpaper;
+package com.example.krasimirunarev.bingwallpaper.ws;
 
 import com.google.gson.annotations.SerializedName;
 

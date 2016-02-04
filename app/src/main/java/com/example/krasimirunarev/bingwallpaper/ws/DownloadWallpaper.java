@@ -3,7 +3,6 @@ package com.example.krasimirunarev.bingwallpaper.ws;
 import android.content.Context;
 import android.os.AsyncTask;
 
-import com.example.krasimirunarev.bingwallpaper.BingResponse;
 import com.example.krasimirunarev.bingwallpaper.Resolutions;
 import com.example.krasimirunarev.bingwallpaper.helpers.WallpaperHelper;
 import com.example.krasimirunarev.bingwallpaper.listeners.OnDownloadComplete;

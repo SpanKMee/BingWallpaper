@@ -2,6 +2,8 @@ package com.example.krasimirunarev.bingwallpaper;
 
 import android.app.Application;
 
+import com.raizlabs.android.dbflow.config.FlowManager;
+
 import net.danlew.android.joda.JodaTimeAndroid;
 
 /**
@@ -14,5 +16,6 @@ public class BingWallpaperApplication extends Application {
         super.onCreate();
         Prefs.init(this);
         JodaTimeAndroid.init(this);
+        FlowManager.init(this);
     }
 }

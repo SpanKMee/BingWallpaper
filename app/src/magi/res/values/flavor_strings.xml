@@ -1,7 +1,18 @@
 <resources>
-    <string name="app_name">Маги</string>
+    <string name="app_name">Маги the best</string>
     <string name="app_disabled_msg">Трябва да активираш приложението, бе мило.</string>
     <string name="wallpaper_updated">Смених картинката :)</string>
     <string name="app_disabled">Спряно :(</string>
     <string name="app_enabled">Пуснато :)</string>
+    <string name="bing_tab">Bing</string>
+    <string name="my_tab">Мойте картинки</string>
+    <string name="delete_image">Сигурна ли си, че искаш да махнеш тази картинка?</string>
+    <string name="yes">Да</string>
+    <string name="no">Не</string>
+    <string name="read_external_storage_msg">Мило, не мога да покажа галерията без твое позволение.</string>
+    <string name="choose_source">Избери си от къде да ти свагам картинките, мило.</string>
+    <string name="ok">Оки</string>
+    <string name="cancel">Махни се</string>
+    <string name="no_custom_pictures">Няма снимки :). Натисни на бутончето долу, за да си добавиш.</string>
+
 </resources>
